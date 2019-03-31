@@ -1,0 +1,95 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(content='IE=edge', http-equiv='X-UA-Compatible')
+        title TipBump | Dashboard
+
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+        link(href='/css/Navigation-Clean.css',rel='stylesheet')
+        link(href='/css/styles.css', rel='stylesheet')
+        link(href='/css/font-awesome.min.css', rel='stylesheet')
+
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans', rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Merriweather', rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Alegreya+SC:400,700', rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700', rel='stylesheet' type='text/css')
+        link(href="/images/favicon.ico", rel="shortcut icon", type='image/x-icon')
+
+        script(type='text/javascript', src='http://public.tableau.com/javascripts/api/tableau-2.0.0.js')
+        script(type='text/javascript', src='/js/tableauviz.js')
+
+        <!--[if lt IE 9 ]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        //block termshdr
+
+    body
+        div
+            nav.navbar.navbar-light.navbar-expand.fixed-top.navigation-clean(style='padding:16px;background-color:#3f3f3f;')
+                .container-fluid
+                    a.navbar-brand(href='/', style='color:#3f3f3f;')
+                        img#logo(src='https://tipbump.com/wp-content/uploads/2019/03/TIPBUMP-Logo-White.png', alt='Logo')
+                    button.navbar-toggler(data-toggle='collapse', data-target='#navcol-2')
+                        span.sr-only Toggle navigation
+                        span.navbar-toggler-icon
+                    //#navcol-1.collapse.navbar-collapse
+                    //ul.nav.navbar-nav.ml-auto
+                    //    li.dropdown
+                    //        a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown', aria-expanded='false', href='#', style='color:rgb(255,255,255);font-weight: bold; font-size: 125%') Blockchain
+                    //        .dropdown-menu(role='menu')
+                    //            a.dropdown-item(role='presentation', href='#') Blockchain
+                    //            a.dropdown-item(role='presentation', href='#') IoT
+                    //            a.dropdown-item(role='presentation', href='#') Cybersecurity
+                    #navcol-2.collapse.navbar-collapse
+                    ul.nav.navbar-nav.ml-auto
+                        li.dropdown
+                            a.dropdown-toggle.nav-link.dropdown-toggle(data-toggle='dropdown', aria-expanded='false', href='#', style='color:rgb(255,255,255);') User Account
+                            span.glyphicon.glyphicon-user.pull-right
+                            .dropdown-menu(role='menu')
+                                a.dropdown-item(role='presentation', href='#') Setup
+                                a.dropdown-item(role='presentation', href='#') Logout
+
+        br
+        br
+        
+
+        br
+        //.nav-center
+        //    ul.nav.nav-pills
+        //        li.nav-item
+        //            a.nav-link.active(data-toggle='pill', onclick="switchView('Landing Page','')") Dashboard
+        //        li.nav-item
+        //            a.nav-link(data-toggle='pill', onclick="switchView('Company Page','No of Companies')") Companies
+        //        li.nav-item
+        //            a.nav-link(data-toggle='pill', onclick="switchView('Investment Page','No of Investments')") Investments
+        //        li.nav-item
+        //            a.nav-link(data-toggle='pill', onclick="switchView('Investor Page','No of Investors')") Investors
+        //        li.nav-item
+        //            a.nav-link(data-toggle='pill', onclick="switchView('Filters','')") Filters
+
+
+
+        form#tableau(name="tableau")
+            //input(type="button", name="test", value="Filter", onclick="filterSingleValue();")
+            .container-fluid
+                .row#vizMain
+                //.row#vizFilters
+
+    script(type='text/javascript').
+        var viz, viz2, workbook;
+        var landingPages = ["Page1","Page2"];
+        var pos = 0;
+        var vizDiv = document.getElementById('vizMain');
+        var vizDivFilters = document.getElementById("vizFilters");
+        var vizURL = "http://viz.gcvanalytics.com/trusted/#{ticket}/t/RestaurantAnalysis/views/Red_o_analysis/UnitlevelServerDashboard?:embed=y:render=false&:toolbar=bottom";
+        var vizURLFilters = "http://viz.gcvanalytics.com/t/NovumInsights/views/NovumMVP/Filters?:embed=y:render=false&:toolbar=bottom:refresh=yes";
+
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", crossorigin="anonymous")
+    script(type='text/javascript', src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", crossorigin="anonymous")
+    script(type='text/javascript', src='https://online.tableau.com/javascripts/api/tableau-2.0.0.js')

@@ -1,0 +1,93 @@
+#logo {
+  max-height:42px;
+  margin-right:10px;
+  margin-top:-3px;
+  display:inline-block;
+}
+
+#page-links {
+  max-height:35px;
+}
+
+.page-link {
+  max-height:35px;
+  text-align:center;
+  color:black;
+  border:none;
+  vertical-align:middle;
+}
+
+.page-links-container {
+  position:fixed;
+}
+
+.navigation-clean.navbar-light .navbar-nav .nav-link:focus, .navigation-clean.navbar-light .navbar-nav .nav-link:hover {
+  color:#bababa !important;
+  background-color:transparent;
+}
+
+.nav-center {
+  text-align: center;
+}
+.nav-center ul.nav {
+  display: inline-block;
+}
+.nav-center ul.nav li {
+  display: inline-block;
+  display-model: l;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0.25rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #3f3f3f;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.nav-pills .nav-link.active:hover,
+.nav-pills .show > .nav-link:hover {
+  color: lightgray;
+  background-color: #3f3f3f;
+}
+
+/* set the distance between pills*/
+/*.nav-pills li {*/
+  /*margin-left: 10px;*/
+  /*margin-right: 10px;*/
+/*}*/
+
+/* set the width of the pills */
+.nav-pills li a {
+  width: 200px;
+}
+
+.nav-pills li.nav-item {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* set curve of pill shape, 0=no curve */
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+
+/* set appearance for inactive pills that are hovered over */
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: lightgray;
+}
+
+.navbar-collapse {
+  text-align:center;
+}
+.navbar-nav {
+  display:inline-block;
+  float:none;
+}

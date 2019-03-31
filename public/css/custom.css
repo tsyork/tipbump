@@ -1,0 +1,83 @@
+.navbar {
+    background-color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.navbar .nav {
+}
+
+.navbar .nav-pills > li > a{
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar .nav > li > a {
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav.nav-center {
+    margin:0;
+    float:none;
+}
+
+.navbar-inner{
+    align-content:center;
+}
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
+#sidebar.affix-top {
+    position: static;
+}
+
+#sidebar.affix {
+    position: fixed;
+    top: 80px;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #555555; /*gcv-blue*/
+}
+
+.nav-pills > .active > a > .badge {
+    color: #555555;  /*gcv-blue*/
+    background-color: #fff;
+}
+
+.sidebar {
+    background-color: #fff;
+}
+
+/** {*/
+    /*-webkit-border-radius: 0 !important;*/
+    /*-moz-border-radius: 0 !important;*/
+    /*border-radius: 0 !important;*/
+/*}*/
+
+.nav .nav-divider {
+    height: 3px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #555555;
+}
+
+.gcv-limegreen {
+    color: #b2d235
+}
+
+.gcv-darkgreen {
+    color: #39b54a
+}
+
+.gcv-medblue-dark {
+    color: #007dc5
+}

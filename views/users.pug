@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .row
+        .container-fluid
+            div.col-md-1
+                ul#sidebar.nav.nav-pills.nav-stacked.sidebar
+                    li.active.gcv_darkblue
+                        a#home(href='#', data-toggle='tab', onclick="switchView('Landing_page')")
+                            i.fa.fa-home.fa-fw.fa-2x
+                            |   Home
+                    li
+                        a#deals(href='#', data-toggle='tab', onclick="switchView('Deals Landing Page')")
+                            i.fa.fa-money.fa-fw.fa-2x
+                            |   Deals
